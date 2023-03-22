@@ -17,7 +17,7 @@ class BluetoothViewModel @Inject constructor(
 
 
     private val _state = MutableStateFlow(BluetoothUIState())
-    private val state = combine(
+    val state = combine(
         bluetoothController.scannedDevices,
         bluetoothController.pairedDevices,
         _state
